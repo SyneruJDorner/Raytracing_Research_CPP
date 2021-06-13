@@ -1,0 +1,34 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+      {
+        "name": "(gdb)",
+        "type": "cppdbg",
+        "request": "launch",
+        "program": "${workspaceFolder}/build/game.exe",
+        "args": [" > output.txt"],
+        "stopAtEntry": false,
+        "cwd": "${workspaceFolder}",
+        "environment": [],
+        "externalConsole": false,
+        "MIMode": "gdb",
+        "miDebuggerPath": "C:/Program Files (x86)/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/gdb.exe",
+        "setupCommands": [
+          {
+            "description": "Enably pretty printing",
+            "text": "-enable-pretty-printing",
+            "ignoreFailures": true
+          },
+          {
+              "description": "Reduce gdb verbosity",
+              "text": "set print thread-events off",
+              "ignoreFailures": true
+          }
+        ],
+        "preLaunchTask": "SDL2",
+        "logging": {
+          "engineLogging": true
+        }
+      }
+    ]
+  }
